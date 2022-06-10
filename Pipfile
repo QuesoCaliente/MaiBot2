@@ -11,6 +11,7 @@ psycopg2-binary = "*"
 twitch-python = "*"
 python-decouple = "*"
 dismusic = "*"
+wavelink = "*"
 
 [dev-packages]
 
