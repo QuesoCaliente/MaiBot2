@@ -20,6 +20,16 @@ def get_prefix(client, message):
 bot = commands.Bot(command_prefix=get_prefix, description='QuotesAnime Bot')
 bot.remove_command('help')
 
+bot.lava_nodes = [
+    {
+        'host': 'lava.link',
+        'port': 80,
+        'rest_uri': f'http://lava.link:80',
+        'identifier' : 'MAIN',
+        'region': 'singapore'
+    }
+]
+
 
 
 
@@ -97,6 +107,7 @@ async def canal_habilitado(ctx):
 async def on_ready():
     
     await bot.change_presence(activity=discord.Game(name=f'¡help | {len(list(bot.guilds))} servers'))
+    await bot.load_extension('dismusic')
     print('Bot en linea')
 
 for filename in os.listdir('cogs'):

@@ -10,6 +10,7 @@ requests = "*"
 psycopg2-binary = "*"
 twitch-python = "*"
 python-decouple = "*"
+dismusic = "*"
 
 [dev-packages]
 
